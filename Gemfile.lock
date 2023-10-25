@@ -81,6 +81,7 @@ GEM
       tzinfo (~> 2.0)
     ast (2.4.2)
     base64 (0.1.1)
+    bcrypt (3.1.19)
     bigdecimal (3.1.4)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -119,6 +120,7 @@ GEM
       reline (>= 0.3.8)
     json (2.6.3)
     jsonapi-renderer (0.2.2)
+    jwt (2.7.1)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
     loofah (2.21.4)
@@ -281,11 +283,13 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt (~> 3.1.7)
   bootsnap
   bullet
   debug
   factory_bot_rails (~> 6.2)
   faker (~> 3.2)
+  jwt (~> 2.2)
   omniauth
   puma (>= 5.0)
   rails (~> 7.1.1)
