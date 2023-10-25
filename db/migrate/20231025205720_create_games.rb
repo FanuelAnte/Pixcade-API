@@ -12,5 +12,6 @@ class CreateGames < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+    add_index :games, :title, unique: true
   end
 end
