@@ -8,4 +8,9 @@ class Game < ApplicationRecord
   has_many :ratings
   has_many :wishlist_items
 
+
+  validates :title, :games, presence: true , uniqueness: true
+  validates :description, :price, :discount, :release_date, :status, :genre, presence: true
+  
+
 end

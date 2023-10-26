@@ -6,6 +6,7 @@ class User < ApplicationRecord
     has_many :ratings
     has_many :wishlist_items
 
+
     validates :first_name, presence: true
     validates :last_name, presence: true
     validates :user_name, presence: true, uniqueness: true

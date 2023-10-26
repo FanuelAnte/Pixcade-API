@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   attribs = [
     {first_name: %i[presence]},
+
     {last_name: %i[presence]},
     {user_name: %i[presence uniqueness]},
     {email: %i[presence uniqueness]},
