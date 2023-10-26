@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :users, only: %i[create show update destroy]
   post '/sign_in', controller: :users, action: :sign_in
+  resources :wishlist_items
 end
