@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :game_tag do
     game
-    tag { "RTS" }
+    tag { 'RTS' }
   end
 end

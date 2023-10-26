@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :wishlist_item do
-    user 
+    user
     game
   end
 end

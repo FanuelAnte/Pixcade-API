@@ -4,9 +4,9 @@ FactoryBot.define do
     description { "MyText" }
     price { 1.5 }
     discount { 1 }
-    release_date { "2023-10-25" }
-    status { "MyString" }
-    genre { "MyString" }
+    release_date { '2023-10-25' }
+    status { 'MyString' }
+    genre { 'MyString' }
     user
   end
 end
