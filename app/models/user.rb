@@ -11,5 +11,5 @@ class User < ApplicationRecord
   validates :user_name, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :date_of_birth, presence: true
-  validates :user_type, presence: true, inclusion: { in: %w[developer client] }
+  validates :user_type, presence: true, inclusion: { in: %w[developer gamer] }
 end

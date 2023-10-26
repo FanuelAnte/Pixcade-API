@@ -1,6 +1,6 @@
 class GameTagsController < ApplicationController
     include Common
-
+    
     private
     
     def model_params
