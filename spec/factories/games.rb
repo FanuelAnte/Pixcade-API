@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :game do
-    title { "MyString" }
+    title { Faker::Name.name }
     description { "MyText" }
     price { 1.5 }
     discount { 1 }
