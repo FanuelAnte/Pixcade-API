@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   include Common
 
   def sign_in
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
+    user = User.find_by(email: params[:user][:email])
+    if user && user.authenticate(params[:user][:password])
       token = JWT.encode({ user_id: user.id, user_email: user.email, user_name: user.user_name }, nil)
       render json: { success: true, jwt: token, user: user }
     else
