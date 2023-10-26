@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :users, only: [:create]
+  resources :users, only: %i[create show update destroy]
   post '/sign_in', controller: :users, action: :sign_in
 end
