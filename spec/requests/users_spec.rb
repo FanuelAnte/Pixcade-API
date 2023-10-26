@@ -1,14 +1,8 @@
 require 'rails_helper'
 
-<<<<<<< HEAD
 RSpec.describe 'Users', type: :request do
   describe 'POST /users' do
     context 'with valid parameters' do
-=======
-RSpec.describe UsersController, type: :request do
-  describe "POST /users" do
-    context "with valid parameters" do
->>>>>>> 1a52c75d4247262f0319ec46220608d838091a8f
       let(:valid_user_params) do
         {
           user: {

@@ -9,5 +9,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :users, only: [:index, :create]
   post '/sign_in', controller: :users, action: :sign_in
+  resources :games
   resources :wishlist_items
+  resources :reviews
+  resources :ratings
+  resources :game_platforms
+  resources :game_tags
 end

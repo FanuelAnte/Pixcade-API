@@ -4,6 +4,6 @@ class GamesController < ApplicationController
   private
 
   def model_params
-    params.require(:game).permit(:title, :description, :genre, :price, :ddiscount, :release_date, :status, :user_id)
+    params.require(:payload).permit(:title, :description, :genre, :price, :discount, :release_date, :status, :user_id)
   end
 end
