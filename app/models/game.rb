@@ -7,6 +7,8 @@ class Game < ApplicationRecord
   has_many :reviews
   has_many :ratings
   has_many :wishlist_items
+  has_many_attached :images
+  has_one_attached :banner
 
   validates :title, presence: true, uniqueness: true
   validates :description, presence: true

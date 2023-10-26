@@ -2,6 +2,7 @@ require 'support/models/shared_models'
 require 'support/requests/shared_requests'
 
 RSpec.configure do |config|
+  config.formatter = RSpec::Core::Formatters::DocumentationFormatter
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end

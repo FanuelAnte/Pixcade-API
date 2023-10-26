@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :ratings
   has_many :wishlist_items
+  has_one_attached :profile_picture
 
   validates :first_name, presence: true
   validates :last_name, presence: true

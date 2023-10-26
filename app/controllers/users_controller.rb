@@ -12,9 +12,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    super do
+      user.profile_picture.attach(params[:profile_picture]) if params [:profile_picture].present?
+    end
+  end
+
   private
 
   def model_params
-    params.require(:user).permit(:first_name, :profile_image, :last_name, :email, :password, :user_name, :date_of_birth, :user_type)
+    params.require(:user).permit(:first_name, :profile_image, :last_name, :email, :password, :user_name, :date_of_birth, :user_type, :profile_picture)
   end
 end
