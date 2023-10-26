@@ -96,10 +96,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_25_212652) do
     t.string "last_name", null: false
     t.string "user_name", null: false
     t.string "email", null: false
-    t.string "password_digest", null: false
+    t.string "password_digest"
     t.date "date_of_birth", null: false
     t.string "user_type", null: false
-    t.string "jit", null: false
+    t.string "jit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_name", "email"], name: "index_users_on_user_name_and_email", unique: true

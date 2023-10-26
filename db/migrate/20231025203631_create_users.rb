@@ -5,10 +5,10 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.string :last_name, null: false
       t.string :user_name, null: false
       t.string :email, null: false
-      t.string :password_digest, null: false
+      t.string :password_digest
       t.date :date_of_birth, null: false
       t.string :user_type, null: false
-      t.string :jit, null: false
+      t.string :jit
 
       t.timestamps
     end

@@ -1,12 +1,11 @@
 FactoryBot.define do
   factory :user do
-    first_name { "MyString" }
-    last_name { "MyString" }
-    user_name { "MyString" }
-    email { "MyString" }
-    password_digest { "MyString" }
-    date_of_birth { "2023-10-25" }
-    user_type { "MyString" }
-    jit { "MyString" }
+    first_name { Faker::Name.name }
+    last_name { Faker::Name.name }
+    user_name { Faker::Name.name }
+    email { Faker::Internet.email }
+    password_digest { "password123" }
+    date_of_birth { Faker::Date.birthday(min_age: 18, max_age: 65) }
+    user_type { "developer" }
   end
 end
