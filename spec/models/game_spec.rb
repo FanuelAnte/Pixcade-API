@@ -16,4 +16,43 @@ RSpec.describe Game, type: :model do
     { wishlist_items: :have_many },
   ]
   include_examples('model_shared_spec', :game, attribs)
+
+  describe 'Banner' do
+    let(:game) { FactoryBot.create(:game) }
+
+    before do
+      image_path = Rails.root.join('spec', 'fixtures', 'profile_pic.jpg')
+      game.banner.attach(io: File.open(image_path), filename: 'profile_image.jpg', content_type: 'image/jpeg')
+    end
+
+    it 'can have a profile image attached' do
+      expect(game.banner).to be_attached
+    end
+  end
+
+  describe 'Banner' do
+    let(:game) { FactoryBot.create(:game) }
+
+    before do
+      image_path = Rails.root.join('spec', 'fixtures', 'profile_pic.jpg')
+      game.banner.attach(io: File.open(image_path), filename: 'profile_image.jpg', content_type: 'image/jpeg')
+    end
+
+    it 'can have a banner attached' do
+      expect(game.banner).to be_attached
+    end
+  end
+
+  describe 'Images' do
+    let(:game) { FactoryBot.create(:game) }
+
+    before do
+      image_path = Rails.root.join('spec', 'fixtures', 'profile_pic.jpg')
+      game.images.attach(io: File.open(image_path), filename: 'profile_image.jpg', content_type: 'image/jpeg')
+    end
+
+    it 'can have images attached' do
+      expect(game.images).to be_attached
+    end
+  end
 end

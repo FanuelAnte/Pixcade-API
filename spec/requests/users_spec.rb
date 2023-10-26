@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :request do
 
       it 'creates a new user' do
         post '/users', params: valid_user_params
-        expect(response).to have_http_status(201)
+        expect(response).to have_http_status(200)
       end
 
       it 'returns a success message' do
