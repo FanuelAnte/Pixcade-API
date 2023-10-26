@@ -7,6 +7,6 @@ FactoryBot.define do
     release_date { "2023-10-25" }
     status { "MyString" }
     genre { "MyString" }
-    developer
+    user
   end
 end

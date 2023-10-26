@@ -8,20 +8,17 @@ RSpec.describe Game, type: :model do
     {discount: %i[presence]},
     {release_date: %i[presence]},
     {status: %i[presence]},
-    {genre: %i[presence]}
-    {user: %i[presence belong_to]},
-    {games: %i[presence uniqueness]},
+    {genre: %i[presence]},
   ]
-
-include_examples('model_shared_spec', :game , attribs)
+  include_examples("model_shared_spec", :game, attribs)
 
 it{is_expected.to(have_many(:game_tags))}
 it{is_expected.to(have_many(:game_platforms))}
 it{is_expected.to(have_many(:reviews))}
 it{is_expected.to(have_many(:ratings))}
 it{is_expected.to(have_many(:wishlist_items))}
-it {should have_one_attached(:banner) }
-it {should have_many_attached(:screenshots) }
-it{should belong_to(:developer)}
+it{should have_one_attached(:banner)}
+it{should have_many_attached(:screenshots)}
+it{should belong_to(:user)}
 
 end
